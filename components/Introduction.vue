@@ -58,7 +58,7 @@ onMounted(() => {
 	inset: 0;
 	background-color: #003;
 	transition-property: transform, opacity;
-	transition-duration: 1s;
+	transition-duration: .5s;
 
 	&.animation-ended {
 		transform: scale(1.5);
@@ -72,7 +72,7 @@ onMounted(() => {
 	z-index: -1;
 	inset: 0;
 	opacity: 0;
-	transition: opacity .5s cubic-bezier(1, .125, 1, 0);
+	transition: opacity 1s cubic-bezier(1, .125, 1, 0);
 
 	.introduction-section.spotlight-on & {
 		opacity: .25;
