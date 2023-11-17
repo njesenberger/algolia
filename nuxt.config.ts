@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const metaTitle: string = 'Nicolas Jesenberger — Algolia';
 const metaDescription: string = 'Front-End Developer in Paris, France';
-const metaUrl: string = 'https://nicolasjesenberger.com';
+const metaUrl: string = 'https://algolia.nicolasjesenberger.com';
 const metaImage: string = `${metaUrl}/images/og-image.png`;
 
 export default defineNuxtConfig({
