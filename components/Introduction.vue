@@ -45,7 +45,7 @@ onMounted(() => {
 				}, 250);
 			}
 		}, 50);
-	}, 1250);
+	}, 1500);
 });
 </script>
 
@@ -58,7 +58,7 @@ onMounted(() => {
 	inset: 0;
 	background-color: #003;
 	transition-property: transform, opacity;
-	transition-duration: .5s;
+	transition-duration: 1s;
 
 	&.animation-ended {
 		transform: scale(1.5);
@@ -108,7 +108,7 @@ onMounted(() => {
 	align-items: center;
 	row-gap: 2em;
 	filter: brightness(.25);
-	transition: filter .5s cubic-bezier(1, .125, 1, 0);
+	transition: filter 1s cubic-bezier(1, .125, 1, 0);
 
 	.introduction-section.spotlight-on & {
 		filter: brightness(1);
