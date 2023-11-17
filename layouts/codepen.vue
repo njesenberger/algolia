@@ -6,7 +6,7 @@
 body {
 	margin: 0 auto;
 	padding: 0;
-	background-color: #fff;
+	background-color: var(--neutral-color-1);
 	font-size: 1em;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
 	<slot></slot>
 	<div class="background-spotlights-container">
-		<Spotlight class="background-spotlight" color="#003dff" />
-		<Spotlight class="background-spotlight" color="#e90a96" />
+		<Spotlight class="background-spotlight" color="var(--primary-color-2)" />
+		<Spotlight class="background-spotlight" color="var(--secondary-color-pink-1)" />
 	</div>
 </template>
 
@@ -12,8 +12,8 @@
 }
 
 ::selection {
-	background-color: #003dff;
-	color: #fff;
+	background-color: var(--primary-color-2);
+	color: var(--neutral-color-1);
 }
 
 body {
@@ -22,10 +22,14 @@ body {
 	max-width: 35em;
 	min-height: 100vh;
 	min-height: 100dvh;
-	background-color: #003;
-	color: #9698c3;
+	background-color: var(--neutral-color-4);
+	color: var(--neutral-color-2);
 	font-feature-settings: 'tnum';
 	font-variant-numeric: tabular-nums;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 .background-spotlights-container {

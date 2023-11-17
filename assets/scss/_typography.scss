@@ -9,18 +9,12 @@ body {
 
 .heading-1 {
 	display: inline-block;
-	background-image: linear-gradient(to right, #1e59ff, #0db7eb,#ceff00, #0db7eb, #1e59ff);
-	background-size: 400% 100%;
+	background-image: var(--primary-gradient);
+	background-size: var(--primary-gradient-size-x) 100%;
 	background-clip: text;
 	font-weight: var(--font-weight-semi-bold);
 	color: transparent;
-	animation: scroll-gradient 10s linear infinite;
-
-	@keyframes scroll-gradient {
-		to {
-			background-position-x: 400%;
-		}
-	}
+	animation: scroll-primary-gradient 10s linear infinite;
 }
 
 .heading-2 {

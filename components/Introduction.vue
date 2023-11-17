@@ -1,7 +1,7 @@
 <template>
 	<section class="introduction-section" v-if="!animationEnded" ref="introductionSection">
 		<div class="introduction-spotlight-container">
-			<Spotlight class="introduction-spotlight" color="#003dff" />
+			<Spotlight class="introduction-spotlight" color="var(--primary-color-2)" />
 			<div class="introduction-spotlight-base"></div>
 		</div>
 		<form class="introduction-form" @submit.prevent>
@@ -26,6 +26,7 @@ const introductionSection: Ref<HTMLElement | null> = ref(null);
 const button: Ref<HTMLButtonElement | null> = ref(null);
 
 onMounted(() => {
+	document.body.classList.add('no-scroll');
 	introductionSection.value!.classList.add('spotlight-on');
 	setTimeout(() => {
 		let i: number = 0;
@@ -40,6 +41,7 @@ onMounted(() => {
 						introductionSection.value!.classList.add('animation-ended');
 						introductionSection.value!.addEventListener('transitionend', () => {
 							animationEnded.value = true;
+							document.body.classList.remove('no-scroll');
 						}, { once: true });
 					});
 				}, 250);
@@ -56,13 +58,12 @@ onMounted(() => {
 	justify-content: center;
 	position: fixed;
 	inset: 0;
-	background-color: #003;
+	background-color: var(--neutral-color-4);
 	transition-property: transform, opacity;
 	transition-duration: .5s;
 
 	&.animation-ended {
 		transform: scale(1.5);
-		// mask-size: 0 0;
 		opacity: 0;
 	}
 }
@@ -98,7 +99,7 @@ onMounted(() => {
 	width: 75vh;
 	height: 12vh;
 	min-width: 428px;
-	background-image: radial-gradient(closest-side, #003DFF, rgb(0 61 255 / 0));
+	background-image: radial-gradient(closest-side, var(--primary-color-2), var(--primary-color-2-alpha-0));
 }
 
 .introduction-form {
@@ -119,20 +120,20 @@ onMounted(() => {
 	display: flex;
 	align-items: center;
 	column-gap: .5em;
-	border: 1px solid #022EB9;
+	border: 1px solid var(--primary-color-3);
 	border-radius: 50px 12px 12px 50px;
 	padding: .5em 1em;
 	min-width: 16em;
 	box-shadow:
-		inset -6px 0 12px #042077,
-		inset 6px 0 12px #042077;
+		inset -6px 0 12px var(--primary-color-4),
+		inset 6px 0 12px var(--primary-color-4);
 	cursor: default;
 }
 
 .introduction-search-bar-icon {
 	width: 1.5em;
 	height: 1.5em;
-	fill: #003DFF;
+	fill: var(--primary-color-3);
 }
 
 .introduction-search-bar {
@@ -144,7 +145,7 @@ onMounted(() => {
 	border-radius: 8px 50px 50px 8px;
 	padding: .5em 1em;
 	min-width: 10em;
-	background-image: linear-gradient(180deg, #003DFF, #0530B7 62%, #003DFF);
+	background-image: linear-gradient(180deg, var(--primary-color-1), var(--primary-color-3) 62%, var(--primary-color-2));
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / .2),
     inset 0 -1px 0 rgb(0 0 0 / .6),

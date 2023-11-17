@@ -1,1 +1,12 @@
-// to do
+:root {
+	--primary-gradient:
+		linear-gradient(
+			to right,
+			var(--primary-color-1),
+			var(--secondary-color-cyan-1),
+			var(--secondary-color-yellow-1),
+			var(--secondary-color-cyan-1),
+			var(--primary-color-1)
+		);
+	--primary-gradient-size-x: 400%;
+}
