@@ -1,0 +1,33 @@
+:root {
+	--font-family-primary: 'Sora', var(--font-familiy-fallback);
+	--font-familiy-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Open Sans', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+body {
+	font-family: var(--font-family-primary);
+}
+
+.heading-1 {
+	display: inline-block;
+	background-image: linear-gradient(to right, #1e59ff, #0db7eb,#ceff00, #0db7eb, #1e59ff);
+	background-size: 400% 100%;
+	background-clip: text;
+	font-weight: var(--font-weight-semi-bold);
+	color: transparent;
+	animation: scroll-gradient 10s linear infinite;
+
+	@keyframes scroll-gradient {
+		to {
+			background-position-x: 400%;
+		}
+	}
+}
+
+.heading-2 {
+	font-weight: var(--font-weight-medium);
+	color: var(--neutral-color-1);
+}
+
+.subheading {
+	color: var(--neutral-color-1);
+}
