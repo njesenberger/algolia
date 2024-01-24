@@ -45,7 +45,7 @@ describe('when setting a custom tag', async () => {
 
 	const wrapper: VueWrapper<any> = await mountSuspended(Section, {
 		props: {
-			tag,
+			tag: 'article',
 		},
 	});
 

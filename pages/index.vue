@@ -40,9 +40,10 @@
 			<Heading class="heading-2 section-heading">Selected CodePens</Heading>
 			<p>
 				For additional works, browse my
-				<Link to="https://twitter.com/njesenberger" target="_blank">Twitter</Link>
+				<Link to="https://twitter.com/njesenberger" target="_blank">Twitter</Link>,
+				<Link to="https://codepen.io/nicolasjesenberger" target="_blank">CodePen</Link>
 				or
-				<Link to="https://codepen.io/nicolasjesenberger" target="_blank">CodePen</Link>.
+				<Link to="https://github.com/njesenberger" target="_blank">GitHub</Link>.
 			</p>
 			<ul class="code-preview-list">
 				<li class="code-preview-list-item" v-for="codePreview in codePreviews" :key="codePreview.slug">
